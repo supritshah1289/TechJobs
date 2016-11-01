@@ -29,14 +29,18 @@
 }
 
 .maps{
-
+  background-color: red;
+  height: 65vh;
+  width: 100vw;
 }
+
 input{
   height: 30px;
-  width: 200px;
+  width: 250px;
   padding: 2px;
   margin-right: 10px;
   font-size: 15px;
+  border-color: blue;
 }
 button{
   height: 40px;
