@@ -1,0 +1,48 @@
+.App {
+  text-align: center;
+}
+
+
+.App-header {
+  background-color: #222;
+  height: 100px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+/*body*/
+.container{
+
+}
+
+.main{
+  padding-top: 20px;
+  background-color:
+}
+
+.jobs{
+
+}
+
+.maps{
+
+}
+input{
+  height: 30px;
+  width: 200px;
+  padding: 2px;
+  margin-right: 10px;
+  font-size: 15px;
+}
+button{
+  height: 40px;
+  width: 70px;
+  border-radius: 5px;
+  font-size: 15px;
+  background-color: #D5BF86;
+
+}
