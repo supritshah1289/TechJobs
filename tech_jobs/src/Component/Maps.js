@@ -8,10 +8,11 @@ class Maps extends Component{
   render(){
 
     const markers = this.props.markers.map((venue, i)=>{
+
       const marker = {
         position: {
-          lat: 40.7575285,
-          lng: -73.9884469
+          lat: typeof(parseInt(venue.company.location.lat)) == 'number' ? parseInt(venue.company.location.lat) : console.log('err'),
+          lng: typeof(parseInt(venue.company.location.lng)) == 'number' ? parseInt(venue.company.location.lng) : console.log('err')
         }
       }
 
@@ -29,6 +30,7 @@ class Maps extends Component{
               defaultCenter={this.props.center}
               options={{streetViewControl: false, mapTypeControl: false}}
             >
+              {markers}
             </GoogleMap>
           }/>
       )

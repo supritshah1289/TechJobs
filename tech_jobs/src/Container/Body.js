@@ -11,9 +11,11 @@ class Body extends Component{
     this.state = {
       searchword: "",
       venues: [],
-      jobs: []
+      jobs: [],
+      display: "none"
     }
   }
+
 
   handleChange(e){
     e.preventDefault();
@@ -28,11 +30,14 @@ class Body extends Component{
     // console.log("clicked")
     const params = {searchword: this.state.searchword}
     Helpers.searchAuthenticJobs(params).then((res)=>{
-      console.log(res);
+      this.setState({
+        venues: res.data.rsp.listings.listing,
+        jobs: res.data.rsp.listings.listing,
+        display: "block"
+      })
     })
+
   }
-
-
 
   render(){
 
@@ -50,8 +55,8 @@ class Body extends Component{
               <button type="button" onClick={(e)=>this.handleSubmit(e)}> Search </button>
           </div>
 
-          <div className="jobs">
-            <Jobs />
+          <div className="jobs" style={{display: this.state.display}}>
+            <Jobs jobs={this.state.jobs}/>
           </div>
 
           <div className="maps">

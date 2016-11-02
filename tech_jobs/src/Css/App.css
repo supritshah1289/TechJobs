@@ -4,8 +4,8 @@
 
 
 .App-header {
-  background-color: #222;
-  height: 100px;
+  background-color: #2A363B;
+  height: 10vh;
   padding: 20px;
   color: white;
 }
@@ -21,18 +21,42 @@
 
 .main{
   padding-top: 20px;
-  background-color:
+  padding-bottom: 20px;
+  background-color:#FFF2BE;
 }
 
 .jobs{
-
+  height: 65vh;
+  width: 35vw;
+  position: absolute;
+  z-index: 1;
+  overflow: scroll;
+  background-color: #FF847B;
 }
 
 .maps{
   background-color: red;
   height: 65vh;
   width: 100vw;
+  /*display:none;*/
 }
+.jobcard{
+  height: 230px;
+  width: 350px;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: #FECEA8;
+  text-align: center;
+  word-wrap: break-word;
+
+}
+/*.jobitems{
+  background-color: black;
+  overflow: scroll;
+  width: 400px;
+
+}*/
 
 input{
   height: 30px;
@@ -40,13 +64,16 @@ input{
   padding: 2px;
   margin-right: 10px;
   font-size: 15px;
-  border-color: blue;
+  border-radius: 5px;
+  border-color: #FF847B;
 }
 button{
   height: 40px;
   width: 70px;
   border-radius: 5px;
   font-size: 15px;
-  background-color: #D5BF86;
+  background-color: #E84A5F;
 
 }
+
+

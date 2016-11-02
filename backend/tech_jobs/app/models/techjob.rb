@@ -1,0 +1,2 @@
+class Techjob < ApplicationRecord
+end
