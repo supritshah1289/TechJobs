@@ -1,17 +1,36 @@
 import React, {Component}   from 'react';
-import Apply                from './Apply.js';
+
 
 class Jobs extends Component{
+  constructor(){
+    super();
+    this.state = {
+      display: ""
+    }
+  }
 
+  handleDescription(){
+    console.log('clicked');
+
+    this.setState({
+      display: "block"
+    })
+
+  }
 
   renderJobs(job,i){
     console.log("logging jobs",job)
+
+    var parseHtml = job.description.replace(/<\/?[^>]+(>|$)/g," ");
+
     return(
-      <div className="jobcard" key={i}>
+      <div className="jobcard" key={i} onClick={this.handleDescription.bind(this)}>
           <h2>{job.title}</h2>
-          <p>{job.type.name}</p>
-          <p>{job.company.location.name}</p>
-          <Apply />
+          <p>{job.company.location.city} || {job.title} </p>
+          <a href={job.apply_url} target="_blank">Apply</a>
+          <article style={{display: this.state.display}} className="job-description">
+            {parseHtml}
+          </article>
       </div>
       )
   }

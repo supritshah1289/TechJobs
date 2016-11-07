@@ -52,6 +52,8 @@ class Body extends Component{
 
           <div className="main">
               <input type="text" placeholder="HTML, CSS, JavaScript, NodeJS" onChange={(e) => this.handleChange(e)}/>
+
+
               <button type="button" onClick={(e)=>this.handleSubmit(e)}> Search </button>
           </div>
 

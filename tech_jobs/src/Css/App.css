@@ -49,8 +49,21 @@
   background-color: #FECEA8;
   text-align: center;
   word-wrap: break-word;
+  cursor: pointer;
+}
+jobcard:hover{
+  background-color: yellow;
+}
+.job-description{
+  display: none;
+  height: 100px;
+  width: 350px;
+  overflow: scroll;
+  word-wrap: break-word;
+  padding: 1px;
 
 }
+
 /*.jobitems{
   background-color: black;
   overflow: scroll;
@@ -73,7 +86,6 @@ button{
   border-radius: 5px;
   font-size: 15px;
   background-color: #E84A5F;
-
 }
 
 
